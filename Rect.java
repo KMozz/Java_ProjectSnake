@@ -1,47 +1,32 @@
 import java.awt.Color;
+import java.awt.Dimension;
 import java.awt.Graphics;
+import java.awt.Point;
 
-public class Rect {
+public class Rect extends Drawable {
+	private Point location;
+	private Dimension dimension;
 	
-	private int x;
-	private int y;
-	private int width;
-	private int height;
-	private Color color;
-	
-	
-	public Rect(int x, int y, int width, int height, Color color) {
-		this.x = x;
-		this.y = y;
-		this.width = width;
-		this.height = height;
-		this.color = color;
+	public Rect(int x, int y, int width, int height) {
+		this.location = new Point(x, y);
+		this.dimension = new Dimension(width, height);
 	}
 	
+	public Rect(Point location, Dimension dimension) {
+		this.location = location;
+		this.dimension = dimension;
+	}
+
+	@Override
 	public void draw(Graphics g) {
-		g.setColor(color);
-		g.fillRect(x, y, width, height);
-	}
-
-	public int getX() {
-		return x;
+		g.fillRect((int)location.getX(), (int)location.getY(), (int)dimension.getWidth(), (int)dimension.getHeight());
 	}
 	
-	public int getY() {
-		return y;
+	public Point getLocation() {
+		return location;
 	}
 
-	public int getWidth() {
-		return width;
+	public Dimension getDimension() {
+		return dimension;
 	}
-
-	public int getHeght() {
-		return height;
-	}
-
-	public Color getColor() {
-		return color;
-	}
-	
-	
 }
