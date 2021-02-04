@@ -1,9 +1,11 @@
+package br.com.softblue.snake.graphics;
+
 import java.awt.Graphics;
 import java.util.ArrayList;
 import java.util.List;
 
 public class Renderer {
-	
+
 	private List<Drawable> drawables;
 	
 	public Renderer() {
@@ -24,5 +26,4 @@ public class Renderer {
 			d.draw(g);
 		}
 	}
-	
 }

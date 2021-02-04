@@ -1,3 +1,5 @@
+package br.com.softblue.snake.graphics;
+
 import java.awt.Color;
 import java.awt.Graphics;
 
@@ -12,7 +14,6 @@ public abstract class Drawable {
 		this.color = color;
 	}
 	
-
 	public Color getColor() {
 		return color;
 	}
@@ -22,5 +23,4 @@ public abstract class Drawable {
 	}
 	
 	public abstract void draw(Graphics g);
-
 }
